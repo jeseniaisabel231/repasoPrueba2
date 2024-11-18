@@ -75,6 +75,5 @@
 
 🚮 ** APK**
 > Aquí puedes encontrar el archivo comprimido que contiene el APK de la aplicación.
-[JMata_IPazto.zip](https://github.com/user-attachments/files/17741081/JMata_IPazto.zip)
 
 
