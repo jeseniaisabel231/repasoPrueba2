@@ -65,15 +65,10 @@
 >     • page: Indica que quieres crear una nueva página (una interfaz completa con lógica y estilos).
 >     • location: Es el nombre de la página que deseas generar.
 > 
-</details>
-
-
-🚮 ** Funcionamiento del APK**
-
-<img src = 'https://github.com/user-attachments/assets/56a20a64-adf7-4730-ba63-7192696a8730' height='600px'>
-  
+</details> 
 
 🚮 ** APK**
 > Aquí puedes encontrar el archivo comprimido que contiene el APK de la aplicación.
+[IPazto.zip](https://github.com/user-attachments/files/17802250/IPazto.zip)
 
 
