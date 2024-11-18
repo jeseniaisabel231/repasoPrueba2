@@ -19,6 +19,8 @@ export interface Message {
   msg: string;
   fromName: string;
   myMsg: boolean;
+  map: boolean;
+  coords?: {latitude: number, longitude:number}
 }
 
 @Injectable({
@@ -71,9 +73,12 @@ export class ChatService {
     return this.afAuth.signOut();
   }
 
-  addChatMessage(msg: string) {
+  addChatMessage(msg: string, map: boolean=false, coords?: {latitude:number, longitude: number}) {
+
     return this.afs.collection('messages').add({
       msg,
+      map,
+      coords:coords || null,
       from: this.currentUser!.uid,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
     });

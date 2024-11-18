@@ -17,6 +17,9 @@
         [offset]="message.myMsg ? 3 : 0"
         [ngClass]="{ 'my-message': message.myMsg, 'other-message': !message.myMsg }">
         <b>{{ message.fromName }}</b><br>
+        <div class="map " *ngIf="message.map">
+          <capacitor-google-map id="map-{{message.id}}"> </capacitor-google-map>
+        </div>
         <span>{{ message.msg }}
         </span>
         <div class="time ion-text-right"><br>{{ message.createdAt?.toMillis() | date:'short' }}</div>
@@ -31,6 +34,7 @@
     <ion-row class="ion-align-items-center">
       <ion-col size="10">
         <ion-textarea autoGrow="true" class="message-input" rows="1" maxLength="500" [(ngModel)]="newMsg" >
+          <ion-button slot="end" fill="clear" color="danger" (click)="sendCurrentPosition()"><ion-icon name="location" slot="icon-only"></ion-icon></ion-button>
         </ion-textarea>
       </ion-col>
       <ion-col size="2">
